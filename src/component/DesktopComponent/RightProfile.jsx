@@ -1,12 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import MobileNav from '../MobileComponent/MobileNav';
-import About from '../../pages/About';
-import Resume from '../../pages/Resume';
-import Portfolio from '../../pages/Portfolio';
-import Blogs from '../../pages/Blogs';
-import Contact from '../../pages/Contact';
+
+// Lazy load components
+const About = lazy(() => import('../../pages/About'));
+const Resume = lazy(() => import('../../pages/Resume'));
+const Portfolio = lazy(() => import('../../pages/Portfolio'));
+const Blogs = lazy(() => import('../../pages/Blogs'));
+const Contact = lazy(() => import('../../pages/Contact'));
+
+// Circular Skeleton Loader
+const SkeletonLoader = () => {
+  return (
+    <div className="w-full h-screen flex justify-center items-center bg-transparent">
+      <div className="w-16 h-16 border-4 border-t-4 border-gray-500 border-solid rounded-full animate-spin"></div>
+    </div>
+  );
+};
 
 const RightProfile = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -57,21 +68,16 @@ const RightProfile = () => {
 
       {/* Dynamic Content (Based on Route) */}
       <div className="p-6">
-        <Routes>
-          <Route path="/about" element={<About />} />
-        </Routes>
-        <Routes>
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-        <Routes>
-          <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
-        <Routes>
-          <Route path="/blog" element={<Blogs />} />
-        </Routes>
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Suspense fallback={<SkeletonLoader />}>
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
       </div>
     </div>
   );
