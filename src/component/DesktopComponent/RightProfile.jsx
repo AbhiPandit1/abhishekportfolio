@@ -45,7 +45,7 @@ const RightProfile = () => {
 
   return (
     <div
-      className="h-[120vh] sm:h-[120vh] overflow-scroll bg-gray-950 text-white shadow-2xl rounded-2xl z-99 border-[0.1px] border-white relative"
+      className="h-[120vh] sm:h-[120vh] overflow-scroll bg-gray-950 text-white shadow-2xl rounded-2xl mb-15 sm:mb-0 z-99 border-[0.1px] border-white relative"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
