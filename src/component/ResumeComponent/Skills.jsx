@@ -57,7 +57,7 @@ const skillsData = [
   },
   {
     category: 'Tools',
-    color: '#f43f5e',
+    color: '#FFFFFF',
     skills: [
       { name: 'Git', icon: <FaGitAlt />, percentage: 90 },
       { name: 'Docker', icon: <FaDocker />, percentage: 78 },
