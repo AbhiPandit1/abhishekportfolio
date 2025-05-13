@@ -46,7 +46,7 @@ const LeftProfile = ({ textColor }) => {
     {
       id: '2',
       label: 'Phone',
-      input: '+91 9958329820 / +44 7887479032',
+      input: '+91 9958329820 / +44 7438393283',
       icon: <FaPhone className="text-amber-200" />,
     },
     {
@@ -104,7 +104,7 @@ const LeftProfile = ({ textColor }) => {
         >
           Abhishek Jha
           <a
-            href="https://drive.google.com/file/d/1RAclaLQ7XsmPES_e9bYJxLG7cMs5olJj/view?usp=sharing"
+            href="https://drive.google.com/file/d/1RAclaLQ7XsmPES_e9bYJxLG7cMs5olJj/view"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-sm p-1 ml-2 mr-2 border border-gray-400 rounded-md shadow-sm hover:bg-gray-800 transition-all"

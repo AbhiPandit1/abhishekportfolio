@@ -11,15 +11,14 @@ import Skills from '../component/ResumeComponent/Skills';
 const experiences = [
   {
     title: 'Full Stack Developer',
-    company: 'Avhi Infotech',
+    company: 'PGC Technologies',
     date: 'Jan 2025 - Present',
     location: 'Bengaluru, India',
     description: [
-      'Leading full-stack development for a scalable freelance talent marketplace using the MERN stack.',
-      'Architecting microservices-based solutions to enhance modularity and maintainability.',
-      'Implementing AWS EC2 for hosting and S3 for secure storage management.',
-      'Configuring Nginx as a reverse proxy and load balancer.',
-      'Enhancing React.js performance by reducing bundle size by 35%.',
+      ' Leading a 7-member team to develop an automation platform using MERN, Docker, K8s, and AWS',
+      'Architected scalable microservices for modular, reliable systems.',
+      'Implemented CI/CD pipelines with GitHub Actions, reducing deployment time by 50%.',
+      'Enhanced system performance by 30% through code optimization and refactoring.',
     ],
   },
   {

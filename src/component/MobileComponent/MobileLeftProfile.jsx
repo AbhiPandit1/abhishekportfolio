@@ -26,7 +26,7 @@ const MobileLeftProfile = () => {
     {
       id: '2',
       label: 'Phone',
-      input: '+91 9958329820 / +44 7887479032',
+      input: '+91 9958329820 / +44 7438393283',
       icon: <FaPhone className="text-amber-200" />,
     },
     {
